@@ -99,15 +99,19 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><button onclick='validatePuzzle2();' type="button"> > </button> </td>
+                                        <td><button onclick='validatePuzzle2a();' type="button"> > </button> </td>
                                     </tr>
                                 </table> 
                                 <div id="colour-box"></div>
                                 <p id="puzzle3-response" class='invisible'>The colour is <b id='colour-name'>Lemon</b></p>
-                                
                             </form>
                             
-                            
+                            <form>
+                                <div>
+                                    <input id="puzzle2-result" name="puzzle2-text" type="text" placeholder="Enter your answer">
+                                    <button class="puzzle-submit" onclick='validatePuzzle2b();' type="button"> > </button>
+                                </div>
+                            </form>
                                 
                         </div>
                         
@@ -115,7 +119,7 @@
                             <form onSubmit="return false">
                                 <label>Solve Puzzle 3</label>
                                 <div>
-                                    <input name="puzzle3-text" type="text" placeholder="Enter your answer">
+                                    <input id="puzzle3-result" name="puzzle3-text" type="text" placeholder="Enter your answer">
                                     <button class="puzzle-submit" onclick='validatePuzzle3();' type="button"> > </button>
                                 </div>
                                 <div class="image-behind">
@@ -206,7 +210,7 @@
                                 <form onSubmit="return false">
                                 <label>Solve Puzzle 5</label>
                                 <div>
-                                    <input id="puzzle5-decrypt" name="decrypted-text" type="text">
+                                    <input id="puzzle5-decrypt" name="decrypted-text" type="text" placeholder="Enter your answer">
                                     <button class="puzzle-submit" onclick='validatePuzzle5();' type="button"> > </button>
                                 </div>
                             </form>
@@ -216,7 +220,7 @@
                                 <form>
                                     <label>Solve Puzzle 6</label>
                                     <div>
-                                        <input id="puzzle6-field" text="text"/>
+                                        <input id="puzzle6-result" name="puzzle6-text" type="text" placeholder="Enter your answer">
                                         <button class="puzzle-submit" onclick="validatePuzzle6();" type="button"> > </button>     
                                     </div>
                                 </form>

@@ -35,18 +35,25 @@ function validatePuzzle1() {
     }
 }
 //Colour code
-function validatePuzzle2(){
+function validatePuzzle2a(){
     /* Check for the answer */
     var red = sliders[0].value;
     var green = sliders[1].value;
     var blue = sliders[2].value;
     if( red == 239 && green == 253 && blue == 95){
-        alert('Puzzle 2 complete');
-        console.log('puzzle 2 validated');
+        console.log('puzzle 2 colour found');
         document.querySelector('#puzzle3-response').classList.remove("invisible");
         document.querySelector('#colour-name').textContent = "Lemon";
+    }
+}
+function validatePuzzle2b(){
+    /* Check for the answer */
+    var value = document.querySelector('#puzzle2-result').value; 
+    if( value == 5 || value.toLowerCase == "five"){
+        console.log('puzzle 2 validated');
         puzzlesStates[0][1] = true;
         puzzleNavBtns[0][1].classList.add('completed');
+        alert('Puzzle 2 complete');
         checkLock(1);
     }
 }
@@ -115,11 +122,24 @@ function validatePuzzle5(){
         checkLock(2);
     }
 }
+
+function validatePuzzle6() {
+    /* Check for the answer */
+    var value = document.querySelector('#puzzle6-result').value; 
+    if( value.toLowerCase == "silence"){
+        alert('Puzzle 6 complete');
+        console.log('puzzle 6 validated');
+        puzzlesStates[1][2] = true;
+        puzzleNavBtns[1][2].classList.add('completed');
+        checkLock(2);
+    }
+}
+
 //
 function validatePuzzle6(){
     /* Check for the answer */
-    var data = document.querySelector('#puzzle6-field').value;
-    if( data.toLowerCase == "Silence"){
+    var value = document.querySelector('#puzzle6-result').value; 
+    if( value.toLowerCase == "silence"){
         alert('Puzzle 6 complete');
         console.log('puzzle 6 validated');
         puzzlesStates[1][2] = true;
