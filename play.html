@@ -1,0 +1,317 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        <link rel="stylesheet" href="Styles/globalStyles.css" type="text/css"/>
+        <link rel="stylesheet" href="Styles/playStyles.css" type="text/css"/>
+        <style class="sliderColorStyle" type="text/css"></style>
+        <style class="sliderColorStyle" type="text/css"></style>
+        <style class="sliderColorStyle" type="text/css"></style>
+        <script type="text/javascript" src="Scripts/playScript.js"></script>
+    </head>
+    <body>
+        <div id="nav-bar">
+            <a id="Logo" class="nav-bar-item" href="home.html">
+                SYSYEMS <b>&#945;</b>
+            </a>
+            
+            <a class="nav-bar-item" href="play.html">PLAY</a>
+            <a class="nav-bar-item" href="faq.html">FAQ & INFO</a>
+        </div>
+        
+        <div id=container-main> <!-- main content -->
+            <div id="section-nav"> <!-- group puzzle Sections -->
+                <a class="puzzle-section" onclick="setActiveSection(1)">
+                    <div>
+                         <img src="Assets/Images/unlocked-lock.png"/>
+                        <p> Section 1 </p>
+                    </div>
+                </a>
+                <a class="puzzle-section" onclick="setActiveSection(2)">
+                    <div>
+                        <img src="Assets/Images/locked-lock.png"/> <p>Section 2 </p>   </div>
+                </a>
+                <a class="puzzle-section" onclick="setActiveSection(3)">
+                    <div> <img src="Assets/Images/locked-lock.png"/> <p>Section 3</p> </div>
+                </a>
+                <a class="puzzle-section" onclick="setActiveSection(4)">
+                    <div> <img src="Assets/Images/locked-lock.png"/> <p>Section 4</p> </div>
+                </a>
+            </div>
+            
+            
+            <div class="puzzle-container">
+                
+                <div id="section-1" class="section">
+                    <div class="puzzle-nav"> 
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(1,1);"> 1 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(1,2);"> 2 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(1,3);"> 3 <div class="cap"> </div> </a>
+                        
+                    </div>
+                    <div id="section-1-puzzle" class="puzzle-form-container"> 
+                    
+                        <div id = "s1-p1" class= "puzzle"> 
+                            <form onSubmit="return false">
+                                <label>Solve Puzzle 1</label>
+                                <div>
+                                    <input id="puzzle1-word" name="hidden-word" type="text" value="" placeholder="Enter your answer">
+                                    <button class="puzzle-submit" onclick='validatePuzzle1();' type="button"> > </button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div id = "s1-p2" class= "puzzle">
+                            <div class ="puzzle-title"><p >Solve Puzzle 2</p></div>
+                            <form onSubmit="return false">
+                                
+                                <table align="center">
+                                    <tr>
+                                        <td>
+                                        <label>Red: </label>
+                                        <input class="colour-value" min="0" max="255" value="0" type="number" oninput="setColourValueNum(0);">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input id="slider-1" class="slider" name="red-slider" step="1" type="range" value="0" min="0" max="255" oninput="setColourValueSlide(0);">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>Green: </label>                       <input class="colour-value" min="0" max="255" value="0" type="number" oninput=setColourValueNum(1);>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>                    
+                                            <input id="slider-2" class="slider" name="green-slider" step="1" type="range" value="0" min="0" max="255" oninput="setColourValueSlide(1);">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label>Blue: </label>
+                                            <input class="colour-value" min="0" max="255" value="0" type="number" oninput="setColourValueNum(2);">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input id="slider-3" class="slider" name="blue-slider" step="1" type="range" min=0 max=255 value="0" oninput="setColourValueSlide(2);">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><button onclick='validatePuzzle2();' type="button"> > </button> </td>
+                                    </tr>
+                                </table> 
+                                <div id="colour-box"></div>
+                                <p id="puzzle3-response" class='invisible'>The colour is <b id='colour-name'>Lemon</b></p>
+                                
+                            </form>
+                            
+                            
+                                
+                        </div>
+                        
+                        <div id = "s1-p3" class= "puzzle">
+                            <form onSubmit="return false">
+                                <label>Solve Puzzle 3</label>
+                                <div>
+                                    <input name="puzzle3-text" type="text">
+                                    <button class="puzzle-submit" onclick='validatePuzzle3();' type="button"> > </button>
+                                </div>
+                                <div class="image-behind">
+                                    <img src="Assets/Images/code.png"/>
+                                </div>
+                                <div id="drag-box" class= "square"></div>
+                            </form>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div id="section-2" class="section locked">
+                    <div class="puzzle-nav"> 
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(2,1);"> 4 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(2,2);"> 5 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(2,3);"> 6 <div class="cap"> </div> </a>
+                    </div>
+                        <div id="section-2-puzzle" class="puzzle-form-container">
+                            <div id = "s2-p1" class= "puzzle">
+                                <div class="puzzle-title">
+                                    <p>Solve Puzzle 4:</p>
+                                </div>
+                                <form onSubmit="return false">
+                                    
+                                    <table id="login" align="center">
+                                        <tr>
+                                            <td>
+                                                <label>username :</label>
+                                                <input id="puzzle4-user" name="username" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label>password  :</label>
+                                                <input id="puzzle4-password" name="password" type="text">
+                                            </td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td><button class="puzzle-submit" onclick='validatePuzzle4();' type="button"> login </button> </td>
+                                        </tr>
+                                        <tr class="invisible">
+                                            
+                                        </tr>
+                                        <tr >
+                                            <td > <div id="toRecovery" class="button" onclick="showRecovery();"> recover password </div></td>
+                                        </tr>
+                                    </table> 
+                                    <table id="recovery" align="center" class="invisible">
+                                        <tr>
+                                            <td>
+                                                What is your first pet name?
+                                                <input id="pet-field" type="text">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>
+                                                What university did you attend?
+                                                <input id="school-field" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 
+                                                What is your unique farewell?
+                                                <input id="farewell-field" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr >
+                                            <td > <div id="recoverBtn" class="button" onclick="validateRecovery();"> recover password</div> </td>
+                                        </tr>
+                                        <tr>
+                                            <td id="password-field"></td>
+                                        </tr>
+                                        <tr >
+                                            <td > <div id="backToLogin" class="button" onclick="showLogin();"> back to login</div> </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                                
+                                
+                            </div>
+                            <div id = "s2-p2" class= "puzzle">
+                                <form onSubmit="return false">
+                                <label>Solve Puzzle 5</label>
+                                <div>
+                                    <input id="puzzle5-decrypt" name="decrypted-text" type="text">
+                                    <button class="puzzle-submit" onclick='validatePuzzle5();' type="button"> > </button>
+                                </div>
+                            </form>
+                            </div>
+                        
+                            <div id = "s2-p3" class= "puzzle">
+                                <form>
+                                    <label>Solve Puzzle 6</label>
+                                    <div>
+                                        <input id="puzzle6-field" text="text"/>
+                                        <button class="puzzle-submit" onclick="validatePuzzle6();" type="button"> > </button>     
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                <div id="section-3" class="section locked">
+                    <div class="puzzle-nav"> 
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(3,1);"> 7 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(3,2);"> 8 <div class="cap"> </div> </a>
+                        <a class="puzzle-num-nav" onclick="setActivePuzzle(3,3);"> 9 <div class="cap"> </div> </a>
+                    </div>
+                    
+                    <div id="section-3-puzzle" class="puzzle-form-container">
+                        <div id = "s3-p1" class= "puzzle">
+                            <form onSubmit="return false">
+                                <label>Solve Puzzle 7</label>
+                                <div>
+                                    <input id="puzzle7-binary" name="binary"type="text">
+                                    <button class="puzzle-submit" onclick="validatePuzzle7" type="button"> > </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div id = "s3-p2" class= "puzzle">
+                            <div class="puzzle-title"><p>Puzzle 8</p></div>
+                            <form onSubmit="return false">
+                            <table id="maze">
+                                <tr>
+                                    <td></td>
+                                    <td class="bordered" onclick="directionClick(1);"> &#8679 </td>
+                                    <td ></td>
+                                </tr>
+                                <tr>
+                                    <td class="bordered" onclick="directionClick(2);"> &#8678 </td>
+                                    <td class="bordered"> </td>
+                                    <td class="bordered" onclick="directionClick(3);"> &#8680</td>
+                                </tr>
+                                <tr>
+                                    <td ></td>
+                                    <td class="bordered" onclick="directionClick(4);"> &#8681 </td>
+                                    <td ></td>
+                                </tr>
+                                
+                            </table>
+                             <table id="instructions">
+                                        <tr>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                            <td>_</td>
+                                        </tr>
+                                    </table>
+                            <button type="button" onclick="deleteLast();">delete last</button>
+                            <button type="button"onclick="clearInstructions();">clear</button>
+                            <button type="button" class="puzzle-submit" onclick='validatePuzzle8();'> check </button>
+                            </form>
+                        </div>
+
+                        <div id = "s3-p3" class= "puzzle">
+                            <form onSubmit="return false">
+                                <label>Solve Puzzle 9:</label>
+                                <div>
+                                    <input id="puzzle9-field" type="text" placeholder="Enter your answer">
+                                    <button type="button" > > </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="section-4" class="section locked">
+                    <div>
+                        
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div id=tools>
+                <div id="colour-picker"></div>
+                <div id="cipherWheel"></div>
+                
+            </div>
+        
+    </div>
+        
+        <footer> </footer>
+            
+    </body>
+</html> 
