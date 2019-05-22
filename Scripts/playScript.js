@@ -27,6 +27,7 @@ function validatePuzzle1() {
     /* Check for the answer */
     var value = document.querySelector('#puzzle1-word').value; 
     if( value == 19 || value.toLowerCase == "nineteen"){
+        alert('Puzzle 1 complete');
         console.log('puzzle 1 validated');
         puzzlesStates[0][0] = true;
         puzzleNavBtns[0][0].classList.add('completed');
@@ -40,6 +41,7 @@ function validatePuzzle2(){
     var green = sliders[1].value;
     var blue = sliders[2].value;
     if( red == 239 && green == 253 && blue == 95){
+        alert('Puzzle 2 complete');
         console.log('puzzle 2 validated');
         document.querySelector('#puzzle3-response').classList.remove("invisible");
         document.querySelector('#colour-name').textContent = "Lemon";
@@ -54,6 +56,7 @@ function validatePuzzle3(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle3-result').value
     if( data == 8){
+        alert('Puzzle 3 complete');
         console.log('puzzle 3 validated');
         puzzlesStates[0][2] = true;
         puzzleNavBtns[0][2].classList.add('completed');
@@ -67,6 +70,7 @@ function validatePuzzle4(){
     var user = document.querySelector('#puzzle4-user').value;
     var pass = document.querySelector('#puzzle4-password').value;
     if( user == "corrylawson" && pass == "livingin2099"){
+        alert('Puzzle 4 complete');
         console.log('puzzle 4 validated');
         puzzlesStates[1][0] = true;
         puzzleNavBtns[1][0].classList.add('completed');
@@ -104,6 +108,7 @@ function validatePuzzle5(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle5-decrypt').value;
     if( 5 == 5){
+        alert('Puzzle 5 complete');
         console.log('puzzle 5 validated');
         puzzlesStates[1][1] = true;
         puzzleNavBtns[1][1].classList.add('completed');
@@ -114,7 +119,8 @@ function validatePuzzle5(){
 function validatePuzzle6(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle6-field').value;
-    if( data.toLowerCase == "systemsalpha"){
+    if( data.toLowerCase == "Silence"){
+        alert('Puzzle 6 complete');
         console.log('puzzle 6 validated');
         puzzlesStates[1][2] = true;
         puzzleNavBtns[1][2].classList.add('completed');
@@ -126,6 +132,7 @@ function validatePuzzle7(){
     /* Check for the answer */
     var data = document.querySelector('puzzle7-binary').value;
     if( data == 197){
+        alert('Puzzle 7 complete');
         console.log('puzzle 7 validated');
         puzzlesStates[2][0] = true;
         puzzleNavBtns[2][0].classList.add('completed');
@@ -137,6 +144,7 @@ function validatePuzzle8(){
     /* Check for the answer */
     var elements = document.querySelectorAll('#instructions td');
     if( 8 == 8){
+        alert('Puzzle 8 complete');
         console.log('puzzle 8 validated');
         puzzlesStates[2][1] = true;
         puzzleNavBtns[2][1].classList.add('completed');
@@ -148,6 +156,7 @@ function validatePuzzle9(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle9-field');
     if( 9 == 9){
+        alert('Puzzle 9 complete');
         console.log('puzzle 9 validated');
         puzzlesStates[2][2] = true;
         puzzleNavBtns[2][2].classList.add('completed');
