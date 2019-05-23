@@ -156,7 +156,7 @@ function validatePuzzle9(){
 }
 //
 function terminateSystemsAlpha(){
-    window.open('win.html');
+
 }
 
 
