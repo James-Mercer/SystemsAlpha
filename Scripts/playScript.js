@@ -136,7 +136,7 @@ function validatePuzzle6() {
 }
 
 //
-function validatePuzzle6(){
+function validatePuzzle6() {
     /* Check for the answer */
     var value = document.querySelector('#puzzle6-result').value; 
     if( value.toLowerCase == "silence"){
@@ -184,8 +184,8 @@ function validatePuzzle9(){
     }
 }
 //
-function validatePuzzle10(){
-    console.log('puzzle 10 validated');
+function terminateSystemsAlpha(){
+
 }
 
 
@@ -354,14 +354,14 @@ window.addEventListener('load', function () {
     sectionPuzzles = [
         [   document.getElementById("s1-p1"), document.getElementById("s1-p2"), document.getElementById("s1-p3")],
         [   document.getElementById("s2-p1"), document.getElementById("s2-p2"), document.getElementById("s2-p3")],
-        [   document.getElementById("s3-p1"), document.getElementById("s3-p2"), document.getElementById("s3-p3")]
+        [   document.getElementById("s3-p1"), document.getElementById("s3-p2")]
     ];
     sectionNavBtns = document.querySelectorAll('.puzzle-section');
     var btns = document.querySelectorAll('.puzzle-num-nav');
     puzzleNavBtns = [
         [btns[0], btns[1], btns[2]],
         [btns[3], btns[4], btns[5]],
-        [btns[6], btns[7], btns[8]]
+        [btns[6], btns[7]]
     ];
     sections.forEach(function (entry) {
         entry.classList.add('invisible');
@@ -386,7 +386,7 @@ window.addEventListener('load', function () {
     
     puzzlesStates = [  [false, false, false] ,
                 [false, false, false],
-                [false, false, false ]             ];
+                [false, false]             ];
     
     dragElement(document.getElementById("drag-box"));
 
