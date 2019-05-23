@@ -111,10 +111,10 @@ function validatePuzzle5(){
     }
 }
 //
-function validatePuzzle6(){
+function validatePuzzle6() {
     /* Check for the answer */
     var data = document.querySelector('#puzzle6-field').value;
-    if( data.toLowerCase == "systemsalpha"){
+    if( data.toLowerCase == "silence"){
         console.log('puzzle 6 validated');
         puzzlesStates[1][2] = true;
         puzzleNavBtns[1][2].classList.add('completed');
@@ -155,8 +155,8 @@ function validatePuzzle9(){
     }
 }
 //
-function validatePuzzle10(){
-    console.log('puzzle 10 validated');
+function terminateSystemsAlpha(){
+    window.open('win.html');
 }
 
 
@@ -325,14 +325,14 @@ window.addEventListener('load', function () {
     sectionPuzzles = [
         [   document.getElementById("s1-p1"), document.getElementById("s1-p2"), document.getElementById("s1-p3")],
         [   document.getElementById("s2-p1"), document.getElementById("s2-p2"), document.getElementById("s2-p3")],
-        [   document.getElementById("s3-p1"), document.getElementById("s3-p2"), document.getElementById("s3-p3")]
+        [   document.getElementById("s3-p1"), document.getElementById("s3-p2")]
     ];
     sectionNavBtns = document.querySelectorAll('.puzzle-section');
     var btns = document.querySelectorAll('.puzzle-num-nav');
     puzzleNavBtns = [
         [btns[0], btns[1], btns[2]],
         [btns[3], btns[4], btns[5]],
-        [btns[6], btns[7], btns[8]]
+        [btns[6], btns[7]]
     ];
     sections.forEach(function (entry) {
         entry.classList.add('invisible');
@@ -357,7 +357,7 @@ window.addEventListener('load', function () {
     
     puzzlesStates = [  [false, false, false] ,
                 [false, false, false],
-                [false, false, false ]             ];
+                [false, false]             ];
     
     dragElement(document.getElementById("drag-box"));
 

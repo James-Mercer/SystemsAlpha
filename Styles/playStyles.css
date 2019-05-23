@@ -24,6 +24,7 @@ input{
 
 #section-nav{
     padding-top: 2.5%;
+    min-width: 85px;
     max-width: 175px;
     width: 15%;
     height: 96%;
@@ -352,7 +353,30 @@ input[type=range]::-ms-thumb {
     min-width: 32px;
 }
 
-/* puzzle 9 */
-/* puzzle 10 - */
+/* section 4 */
+#button-container{
+    padding-top: 5%;
+    width: 100%;
+    height: 80%;
+}
+#terminate-button{
+    display: block;
+    margin: auto;
+    width: 35%;
+    padding-top: 35%;
+    border: solid black 8px;
+    border-radius: 50%;
+    background: #900;
+    box-shadow: 0 9px #222;
+}
+#terminate-button:hover{
+    background: #E00;
+}
+#terminate-button:active {
+  background-color: #E00;
+  box-shadow: 0 5px #222;
+  transform: translateY(4px);
+}
+
 
 /* media queries for less than 810 px width */

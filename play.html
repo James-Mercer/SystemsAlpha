@@ -16,7 +16,7 @@
             </a>
             
             <a class="nav-bar-item" href="play.html">PLAY</a>
-            <a class="nav-bar-item" href="faq.html">FAQ & INFO</a>
+            <a class="nav-bar-item" href="faq.html">Rules and Res</a>
         </div>
         
         <div id=container-main> <!-- main content -->
@@ -229,7 +229,6 @@
                     <div class="puzzle-nav"> 
                         <a class="puzzle-num-nav" onclick="setActivePuzzle(3,1);"> 7 <div class="cap"> </div> </a>
                         <a class="puzzle-num-nav" onclick="setActivePuzzle(3,2);"> 8 <div class="cap"> </div> </a>
-                        <a class="puzzle-num-nav" onclick="setActivePuzzle(3,3);"> 9 <div class="cap"> </div> </a>
                     </div>
                     
                     <div id="section-3-puzzle" class="puzzle-form-container">
@@ -282,30 +281,22 @@
                             <button type="button" class="puzzle-submit" onclick='validatePuzzle8();'> check </button>
                             </form>
                         </div>
-
-                        <div id = "s3-p3" class= "puzzle">
-                            <form onSubmit="return false">
-                                <label>Solve Puzzle 9:</label>
-                                <div>
-                                    <input id="puzzle9-field" type="text" placeholder="Enter your answer">
-                                    <button type="button" > > </button>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
                 
                 <div id="section-4" class="section locked">
-                    <div>
+                    <div class='puzzle'>
+                        
+                        <div id='button-container'>
+                            <a id="terminate-button" href='win.html'
+                             target='_blank'></a>
+                        </div>
+                        
+                        
                         
                     </div>
                 </div>
                 
-                
-            </div>
-            <div id=tools>
-                <div id="colour-picker"></div>
-                <div id="cipherWheel"></div>
                 
             </div>
         
