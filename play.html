@@ -16,7 +16,8 @@
             </a>
             
             <a class="nav-bar-item" href="play.html">PLAY</a>
-            <a class="nav-bar-item" href="faq.html">Rules and Res</a>
+            <a class="nav-bar-item" href="faq.html">RULES</a>
+            <a class="nav-bar-item" >DWNLD</a>
         </div>
         
         <div id=container-main> <!-- main content -->
@@ -106,7 +107,7 @@
                                 <p id="puzzle3-response" class='invisible'>The colour is <b id='colour-name'>Lemon</b></p>
                             </form>
                             
-                            <form>
+                            <form id='partb' onsubmit='return false'>
                                 <div>
                                     <input id="puzzle2-result" name="puzzle2-text" type="text" placeholder="Enter your answer">
                                     <button class="puzzle-submit" onclick='validatePuzzle2b();' type="button"> > </button>
@@ -241,7 +242,7 @@
                                 <label>Solve Puzzle 7</label>
                                 <div>
                                     <input id="puzzle7-binary" name="binary"type="text">
-                                    <button class="puzzle-submit" onclick="validatePuzzle7" type="button"> > </button>
+                                    <button class="puzzle-submit" onclick="validatePuzzle7();" type="button"> > </button>
                                 </div>
                             </form>
                         </div>
@@ -249,38 +250,52 @@
                             <div class="puzzle-title"><p>Puzzle 8</p></div>
                             <form onSubmit="return false">
                             <table id="maze">
-                                <tr>
-                                    <td></td>
-                                    <td class="bordered" onclick="directionClick(1);"> &#8679 </td>
-                                    <td ></td>
+                                <tbody>
+                                
+                                    
+                                <tr id="row1">
+                                    <td class="col1"></td>
+                                    <td class="bordered col2" onclick="directionClick(1);"> &#8679 </td>
+                                    <td class="col3"></td>
                                 </tr>
-                                <tr>
-                                    <td class="bordered" onclick="directionClick(2);"> &#8678 </td>
-                                    <td class="bordered"> </td>
-                                    <td class="bordered" onclick="directionClick(3);"> &#8680</td>
+                                <tr id=row2>
+                                    <td class="bordered col1" onclick="directionClick(2);"> &#8678 </td>
+                                    <td class="bordered col2"> </td>
+                                    <td class="bordered col3" onclick="directionClick(3);"> &#8680</td>
                                 </tr>
-                                <tr>
-                                    <td ></td>
-                                    <td class="bordered" onclick="directionClick(4);"> &#8681 </td>
-                                    <td ></td>
+                                <tr id="row3">
+                                    <td class="col1"></td>
+                                    <td class="bordered col2" onclick="directionClick(4);"> <span>&#8681</span></td>
+                                    <td class="col3"></td>
                                 </tr>
+                                        
+                                
+                                </tbody>
+                                
                                 
                             </table>
-                             <table id="instructions">
-                                        <tr>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                            <td>_</td>
-                                        </tr>
-                                    </table>
-                            <button type="button" onclick="deleteLast();">delete last</button>
+                            <div id="instructions">
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                                <div class="element">_</div>
+                            </div>
+                            
+                                <button type="button" onclick="deleteLast();">delete last</button>
                             <button type="button"onclick="clearInstructions();">clear</button>
                             <button type="button" class="puzzle-submit" onclick='validatePuzzle8();'> check </button>
                             </form>
@@ -306,7 +321,7 @@
         
     </div>
         
-        <footer class="footer"> Copyright <a onClick="alert('The answer to puzzle 6 is: &quot;Silence&quot;')" style="cursor: pointer; cursor: hand;">&copy;</a> 2019 BioSphere. All Rights Reserved. </footer>
+    <footer class="footer"> Copyright <a onClick="alert('The answer to puzzle 6 is: &quot;Silence&quot;')" style="cursor: pointer; cursor: hand;">&copy;</a> 2019 BioSphere. All Rights Reserved. </footer>
             
     </body>
 </html> 

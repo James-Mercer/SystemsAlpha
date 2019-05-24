@@ -150,7 +150,7 @@ function validatePuzzle6() {
 //
 function validatePuzzle7(){
     /* Check for the answer */
-    var data = document.querySelector('puzzle7-binary').value;
+    var data = document.querySelector('#puzzle7-binary').value;
     if( data == 197){
         alert('Puzzle 7 complete');
         console.log('puzzle 7 validated');
@@ -162,15 +162,18 @@ function validatePuzzle7(){
 //
 function validatePuzzle8(){
     /* Check for the answer */
-    var elements = document.querySelectorAll('#instructions td');
-    if( 8 == 8){
+    if( checkArray() ){
         alert('Puzzle 8 complete');
         console.log('puzzle 8 validated');
         puzzlesStates[2][1] = true;
         puzzleNavBtns[2][1].classList.add('completed');
         checkLock(3);
+    }else{
+        alert('incorrect');
     }
 }
+
+
 //
 function validatePuzzle9(){
     /* Check for the answer */
@@ -197,6 +200,8 @@ function setActiveSection(section){
         }
         sectionNavBtns[section-1].classList.add('active-section');
         sections[section-1].classList.remove('invisible');
+    }else{
+        alert("Section "+ section + ": currently locked")
     }
 }
 
@@ -299,42 +304,55 @@ function dragElement(elmnt) {
 var instructions = [];
 
 function directionClick(direction){
-    if(instructions.length < 10){
+    if(instructions.length < 18){
         instructions.push(direction);
         switch(direction){
-            case 1:
+            case 1: //up
                 fields[instructions.length-1].innerHTML = '&#8679';
                 break;
-            case 2:
+            case 2: // left
                 fields[instructions.length-1].innerHTML = '&#8678';
                 break;
-            case 3:
+            case 3: //right
                 fields[instructions.length-1].innerHTML = '&#8680';
                 break;
-            case 4:
+            case 4: //down
                 fields[instructions.length-1].innerHTML = '&#8681' ;
                 break;
         }
         
-        if(instructions.length >= 10){
+        if(instructions.length >= 18){
             validatePuzzle8();
         }
     }else{
         //array is full
     }
 }
+// D L D D D L U L D D D D R R R U R U
+// 4 2 4 4 4 2 1 2 4 4 4 4 3 3 3 1 3 1
+function checkArray(){
+    var alg = [4, 2, 4, 4, 4, 2, 1,2, 4,4,4,4,3,3,3,1,3,1];
+    if(instructions.length != alg.length){
+        return false;
+    }
+    for(var i = 0; i < alg.length; i++){
+        if(alg[i] != instructions[i]){
+           return false;
+        }
+    }
+    return true;
+}
+
 function clearInstructions(){
     instructions = [];
     fields.forEach(function(entry){
         entry.textContent = "_";
     });
-    
 }
 function deleteLast(){
     fields[instructions.length-1].textContent = "_"
     instructions.pop();
 }
-
 function unlockAll(){
     puzzlesStates.forEach(function (entry){
        entry = true; 
@@ -375,7 +393,7 @@ window.addEventListener('load', function () {
     setActivePuzzle(3, 1);
     setActiveSection(1);
     setActivePuzzle(1, 1);
-    fields = document.querySelectorAll("#instructions td");
+    fields = document.querySelectorAll(".element");
     
     sliders = document.querySelectorAll('.slider');
     sliderStyles = document.querySelectorAll('.sliderColorStyle');
@@ -389,7 +407,6 @@ window.addEventListener('load', function () {
                 [false, false]             ];
     
     dragElement(document.getElementById("drag-box"));
-
     unlockAll();
 });
 
