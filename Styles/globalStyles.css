@@ -33,12 +33,13 @@ a:visited{
 }
 #nav-bar{
     font-size: 1.6em;
-    display: inline-flex;
+    display: flex;
     border-bottom: 2px solid black;
     width: 100%;
     height: 1.1em;
     margin: 0;
 }
+
 .nav-bar-item{
     display: block;
     width: 20%;
@@ -58,8 +59,17 @@ a:visited{
 .nar-bar-item:active{
     box-shadow: inset 0 0 10px #000000;
 }
-#logo{
+.filler{
+    min-width: 0;
+}
+.filler:hover{
+    background: rgb(40,40,45);
+}
+.filler:active{
     
+}
+#download{
+    min-width: 265px;
 }
 .vertical-divider{
     width: 2px;
@@ -82,4 +92,20 @@ a:visited{
     width: 100%;
     color: white;
     text-align: center;
+}
+.footer a {
+  display: inline-block;
+  position: relative;
+}
+.footer:before {
+  content: "~~";
+  font-size: 0.6em;
+  font-weight: 700;
+  font-family: Times New Roman, Serif;
+  color: red;
+  width: 100%;
+  position: absolute;
+  top: 11px;
+  left: -85px;
+  overflow: hidden;
 }
