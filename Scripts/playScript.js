@@ -76,8 +76,8 @@ function validatePuzzle4(){
     /* Check for the answer */
     var user = document.querySelector('#puzzle4-user').value;
     var pass = document.querySelector('#puzzle4-password').value;
-    if( user == "corrylawson" && pass == "livingin2099"){
-        alert('Puzzle 4 complete \n shift: 15');
+    if( user == "corylawson_biosphere@outlook.com" && pass == "livingin2099"){
+        alert('Puzzle 4 complete \n The ceasar shift is: 15 RIGHT');
         console.log('puzzle 4 validated');
         puzzlesStates[1][0] = true;
         puzzleNavBtns[1][0].classList.add('completed');
