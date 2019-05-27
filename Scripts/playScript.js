@@ -151,7 +151,7 @@ function validatePuzzle6() {
 function validatePuzzle7(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle7-binary').value;
-    if( data == 197){
+    if( data == 13){
         alert('Puzzle 7 complete');
         console.log('puzzle 7 validated');
         puzzlesStates[2][0] = true;
