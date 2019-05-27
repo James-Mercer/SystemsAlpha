@@ -94,7 +94,7 @@ function validateRecovery(){
     school = school.toLowerCase();
     farewell = farewell.toLowerCase();
     console.log(dogname + ", " + school + ", " + farewell);
-    if(dogname == "bo" && (school == "university of brighton" || school == "the university of brighton" || school == "uni of brighton" || school == "the uni of brighton" || school == "brighton uni") && farewell == "live long and prosper"){
+    if(dogname == "bo" && (school == "university of brighton" || school == "the university of brighton" || school == "uni of brighton" || school == "the uni of brighton" || school == "brighton uni" || school == "brighton" || school == "brighton university") && farewell == "live long and prosper"){
         console.log('recovery complete');
         document.querySelector('#password-field').textContent = "Your password is: livingin2099";
     }
