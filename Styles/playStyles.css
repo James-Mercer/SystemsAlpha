@@ -302,7 +302,7 @@ input[type=range]::-ms-thumb {
     height: 453px;
     width: 510px;
     z-index: 1;
-    background-color: rgb(49, 49, 53);
+    background-color: rgb(45, 45, 50);
     cursor: move;
 }
 #s1-p3 label, #s1-p3 input, #s1-p3 input{
@@ -327,7 +327,10 @@ input[type=range]::-ms-thumb {
     margin 0 25% 0 25%;
 }
 /* puzzle 5 - */
-
+#puzzle5-decrypt{
+    width: 60%;
+    min-width: 220px;
+}
 /* puzzle 6 - */
 
 /* puzzle 7 - */

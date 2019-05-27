@@ -77,7 +77,7 @@ function validatePuzzle4(){
     var user = document.querySelector('#puzzle4-user').value;
     var pass = document.querySelector('#puzzle4-password').value;
     if( user == "corrylawson" && pass == "livingin2099"){
-        alert('Puzzle 4 complete');
+        alert('Puzzle 4 complete \n shift: 15');
         console.log('puzzle 4 validated');
         puzzlesStates[1][0] = true;
         puzzleNavBtns[1][0].classList.add('completed');
@@ -114,7 +114,7 @@ function showLogin(){
 function validatePuzzle5(){
     /* Check for the answer */
     var data = document.querySelector('#puzzle5-decrypt').value;
-    if( 5 == 5){
+    if( data.toLowerCase == ("it will CLICK ONly when THE knowledge of COPYRIGHT is LINKed").toLowerCase){
         alert('Puzzle 5 complete');
         console.log('puzzle 5 validated');
         puzzlesStates[1][1] = true;
@@ -173,19 +173,6 @@ function validatePuzzle8(){
     }
 }
 
-
-//
-function validatePuzzle9(){
-    /* Check for the answer */
-    var data = document.querySelector('#puzzle9-field');
-    if( 9 == 9){
-        alert('Puzzle 9 complete');
-        console.log('puzzle 9 validated');
-        puzzlesStates[2][2] = true;
-        puzzleNavBtns[2][2].classList.add('completed');
-        checkLock(3);
-    }
-}
 //
 function terminateSystemsAlpha(){
 

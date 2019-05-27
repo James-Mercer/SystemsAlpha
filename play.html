@@ -55,7 +55,7 @@
                             <form onSubmit="return false">
                                 <label>Solve Puzzle 1</label>
                                 <div>
-                                    <input id="puzzle1-word" name="hidden-word" type="text" value="" placeholder="Enter your answer">
+                                    <input id="puzzle1-word" name="hidden-word" type="text" value="" placeholder="Enter the number">
                                     <button class="puzzle-submit" onclick='validatePuzzle1();' type="button"> > </button>
                                 </div>
                             </form>
@@ -108,6 +108,7 @@
                             
                             <form id='partb' onsubmit='return false'>
                                 <div>
+                                    <label>Colour word length: </label>
                                     <input id="puzzle2-result" name="puzzle2-text" type="text" placeholder="Enter your answer">
                                     <button class="puzzle-submit" onclick='validatePuzzle2b();' type="button"> > </button>
                                 </div>
@@ -152,13 +153,13 @@
                                         <tr>
                                             <td>
                                                 <label>username :</label>
-                                                <input id="puzzle4-user" name="username" type="text">
+                                                <input id="puzzle4-user" name="username" placeholder="username"type="text">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <label>password  :</label>
-                                                <input id="puzzle4-password" name="password" type="text">
+                                                <input id="puzzle4-password" name="password" placeholder=" password" type="text">
                                             </td>
                                             
                                         </tr>
@@ -176,20 +177,21 @@
                                         <tr>
                                             <td>
                                                 What is your first pet name?
-                                                <input id="pet-field" type="text">
+                                                <input id="pet-field" placeholder="pet name" type="text">
                                             </td>
                                         </tr>
                                         
                                         <tr>
                                             <td>
                                                 What university did you attend?
-                                                <input id="school-field" type="text">
+                                                <input id="school-field" placeholder="university" type="text">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td> 
-                                                What is your unique farewell?
-                                                <input id="farewell-field" type="text">
+                                                How do you sign off your emails?
+                                                <input id="farewell-field" 
+                                                       placeholder="sign-off" type="text">
                                             </td>
                                         </tr>
                                         <tr >
@@ -210,7 +212,7 @@
                                 <form onSubmit="return false">
                                 <label>Solve Puzzle 5</label>
                                 <div>
-                                    <input id="puzzle5-decrypt" name="decrypted-text" type="text" placeholder="Enter your answer">
+                                    <input id="puzzle5-decrypt" name="decrypted-text" type="text" placeholder="Enter the key phrase">
                                     <button class="puzzle-submit" onclick='validatePuzzle5();' type="button"> > </button>
                                 </div>
                             </form>
@@ -240,7 +242,7 @@
                             <form onSubmit="return false">
                                 <label>Solve Puzzle 7</label>
                                 <div>
-                                    <input id="puzzle7-binary" name="binary"type="text">
+                                    <input id="puzzle7-binary" name="binary"type="text" placeholder="Enter Binary Value">
                                     <button class="puzzle-submit" onclick="validatePuzzle7();" type="button"> > </button>
                                 </div>
                             </form>
